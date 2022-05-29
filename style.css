@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+:root{
+    --first-color: #3380FF;
+    --logo-font: 'Ubuntu Mono', monospace;
+    --content-font: 'Roboto', sans-serif;
+}
+
+body{
+    font-family: var(--content-font);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#content{
+    display: flex;
+    flex-direction: row;
+}
+
+.credit a{
+    color: white;
+}
+
+.logo-txt{
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: var(--logo-font);
+    font-size: 1.3rem;
+    line-height: 5rem;
+}
+
+#logo-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(img/clouds.jpeg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    width: 50%;
+    height: 120vh;
+}
+
+.credit{
+    font-size: 0.8rem;
+}
+
+#info-cont{ 
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.info, 
+.info2{
+    font-size: 1.3rem;
+    text-align: left;
+    margin-left: 40px;
+    width: 90%;
+}
+
+.info{
+    margin-top: 8rem;
+    margin-bottom: 0;
+}
+
+.info2{
+    margin-bottom: 60px;
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(100% - 40px);
+    height: 40vh;
+    padding-left: 40px;
+    box-shadow: rgba(0, 0, 0, 40%) 1px 3px 8px;;
+}
+
+.form-input > p{
+    font-size: 1.3rem;
+}
+
+label{
+    font-weight: 900;
+    text-align: left;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+label, input{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-right: 14rem;
+}
+
+input{
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    padding: 6px;
+    width: 200px;
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid var(--first-color);
+    box-shadow: rgba(0, 0, 0, 20%) 1px 3px 8px;
+}
+
+.inputs div{
+    flex: 35%;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 30px 0 12px 40px;
+    width: 13rem;
+    background-color: var(--first-color);
+    color: white;
+    box-shadow: rgba(0, 0, 0, 20%) 1px 3px 8px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.submit-login{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.submit-login > p{
+    margin-left: 40px;
+}
+
+.submit-login a{
+    text-decoration: none;
+    font-weight: 900;
+    color: var(--first-color);
+}
+
+.invalid{
+    border: 1px solid red;
+}
+
+.valid{
+    border: 1px solid #E5E7EB;
+}
+
+.inputs div > span{
+    display: flex;
+    color: red;
+    font-size: 0.6rem;
+}
+
+@media (max-width: 1200px){
+    #logo-cont{
+        height: 140vh;
+    }
+
+    .form-input{
+        height: 67vh;
+    }
+}
+
+@media (max-width: 550px){
+    .credit, .credit a{
+        font-size: 0.5rem;
+    }
+
+    .logo-txt{
+        font-size: 0.9rem;
+        margin-top: 5vh;
+    }
+
+    #logo-cont{
+        height: 100vh;
+        width: 45%;
+    }
+
+    #info-cont{
+        width: 50%;
+    }
+
+    .info{
+        margin-top: 1.6rem;
+    }
+
+    .info,
+    .info2{
+        font-size: 0.9rem;
+    }
+
+    #myForm{
+        width: 48%;
+    }
+
+    .form-input{
+        width: 94%;
+        height: 56vh;
+    }
+
+    .form-input > p{
+        font-size: 0.9rem;
+    }
+
+    label{
+        font-size: 0.5rem;
+    }
+
+    input{
+        width: 160px;
+        padding: 4px;
+    }
+
+    button{
+        margin-top: 20px;
+        font-size: 8px;
+        padding: 8px;
+        width: 7rem;
+    }
+
+    .submit-login > p{
+        font-size: 0.5rem;
+    }
+}
